@@ -1,11 +1,11 @@
-/* The custom MustMatch validator is used in this example to validate that both of the password fields - 
-password and confirmPassword - are matching. However it can be used to validate that any pair of fields 
-is matching (e.g. email and confirm email fields).
-It works slightly differently than a typical custom validator because I'm setting the error on the second 
-field instead of returning it to be set on the formGroup. I did it this way because I think it makes the 
-template a bit cleaner and more intuitive, the mustMatch validation error is displayed below the 
-confirmPassword field so I think it makes sense that the erroris attached the the confirmPassword form 
-control.*/
+/* This validator is used to validate that both of the password fields -
+password and confirmPassword - are matching. However it can be used to validate that any pair of fields
+match (e.g. email and confirm email fields).
+It works differently from a typical custom validator because I'm setting the error on the second
+field instead of returning it to be set on the formGroup.
+
+The mustMatch validation error is displayed below the confirmPassword field so the error is attached
+to the confirmPassword form control.*/
 
 import { FormGroup } from '@angular/forms';
 
@@ -31,5 +31,5 @@ export function MustMatch(controlName: string, matchingControlName: string) {
         } else {
             matchingControl.setErrors(null);
         }
-    }
+    };
 }

@@ -1,10 +1,10 @@
-/*defines a model object that is bound to the form fields in the template. 
-Enables access to the data entered in the form. 
- */
+/*defines a model object that is bound to the form fields in the template.
+Enables access to the data entered in the form.*/
+
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app',
+  selector: 'app-root',
   templateUrl: 'app.component.html'
 })
 
