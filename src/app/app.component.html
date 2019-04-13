@@ -9,7 +9,8 @@ first time, this is controlled with the f.submitted property of the #f="ngForm" 
   <div class="container">
     <div class="row">
       <div class="col-md-8 offset-md-2">
-        <h3>Angular 7 Template-Driven Form Validation</h3>
+
+        <h5>Angular 7 Template-Driven Form Validation</h5>
         <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" [mustMatch]="['password', 'confirmPassword']" novalidate>
           <div class="form-group">
             <label for="firstName">First Name</label>
@@ -22,7 +23,7 @@ first time, this is controlled with the f.submitted property of the #f="ngForm" 
               [ngClass]="{ 'is-invalid': f.submitted && firstName.invalid }" 
               required
             />
-            <div *ngIf="f.submitted && firstName.invalid" class="invalid-feedback">
+            <div *ngIf="f.submitted && firstName.invalid" class="invalid-feedback ">
               <div *ngIf="firstName?.errors.required">First Name is required</div>
             </div>
           </div>
@@ -61,6 +62,16 @@ first time, this is controlled with the f.submitted property of the #f="ngForm" 
             <button class="btn btn-primary">Register</button>
           </div>
         </form>
+        <h5>maxLength Validator</h5>
+        <form>
+          <div class="md-form">
+            <input mdbInput mdbValidate name="input" type="text" id="form3" class="form-control" [(ngModel)]="maxLength" #input="ngModel" required maxlength="5">
+            <label for="form3">maxLength validator</label>
+            <div *ngIf="input.invalid && (input.dirty || input.touched)" [ngClass]="{ 'is-invalid': f.submitted && password.invalid }" class="invalid-feedback">Input invalid</div>
+            <div *ngIf="input.valid && (input.dirty || input.touched)" class="valid-feedback">Input valid</div>
+          </div>
+        </form>
+
       </div>
     </div>
   </div>

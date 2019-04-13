@@ -1,6 +1,6 @@
 # Angular Form Validation
 
-This app sets up form validation in Angular 7 using Template-Driven Forms. This is a simple registration form with standard fields for first name, last name, email, password and confirm password.
+This app sets up form validation in Angular 7 using Template-Driven Forms. This is a simple registration form with standard fields for first name, last name, email, password and confirm password. Additional field with maxLength validator added.
 
 *** Note: to open web links in a new window use: _ctrl+click on link_**
 
@@ -17,6 +17,8 @@ This app sets up form validation in Angular 7 using Template-Driven Forms. This 
 
 ## General info
 
+* Input fields of main form have validation so incorrect inputs trigger a red boundary around the input field and an error message.
+
 * Styling of the template-driven forms is done using Bootstrap 4 CSS.
 
 ## Screenshots
@@ -25,15 +27,35 @@ This app sets up form validation in Angular 7 using Template-Driven Forms. This 
 
 ## Technologies
 
-* [Angular v7.0.0](https://angular.io/) & [Angular CLI v7.3.8](https://cli.angular.io/).
+* [Angular v7.2.13](https://angular.io/) & [Angular CLI v7.3.8](https://cli.angular.io/).
 
-* [RxJS Library v6.4.0](https://angular.io/guide/rx-library) used to handle datastreams and propagation of change using observables.
+* [Bootstrap v4.3](https://getbootstrap.com/) component library used.
 
 ## Setup
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code Examples
+
+* div with firstName field entry that is validated using a validator and directive called MustMatch
+
+```typescript
+          <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input
+              class="form-control"
+              name="firstName"
+              [(ngModel)]="model.firstName"
+              #firstName="ngModel"
+              [ngClass]="{ 'is-invalid': f.submitted && firstName.invalid }"
+              required
+            />
+            <div *ngIf="f.submitted && firstName.invalid" class="invalid-feedback ">
+              <div *ngIf="firstName?.errors.required">First Name is required</div>
+            </div>
+          </div>
+
+```
 
 ## Features
 
@@ -45,9 +67,9 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 ## Status & To-Do List
 
-* Status:
+* Status: simple working form with validaton. The maxLength validation div does not provide error message, just limits the field length to 5 characters.
 
-* To-Do: add to commenting. Look into developer tools comment:[DOM] Input elements should have autocomplete attributes (suggested: "new-password"):(More info: `https://goo.gl/9p2vKq)`
+* To-Do: add functionality to form.
 
 ## Inspiration
 

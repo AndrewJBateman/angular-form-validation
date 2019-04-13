@@ -2,7 +2,6 @@
 Enables access to the data entered in the form.*/
 
 import { Component } from '@angular/core';
-
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html'
@@ -10,6 +9,7 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
   model: any = {};
+  public maxLength = 5;
 
   onSubmit() {
     alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.model));

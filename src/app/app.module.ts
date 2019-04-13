@@ -3,7 +3,7 @@ array of the @NgModule decorator.
 Also import the custom validation directive { MustMatchDirective }
 from './_helpers/must-match.directive' and include it in
 the declarations array of the @NgModule decorator.*/
-import {NgModule} from '@angular/core';
+import {NgModule, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {FormsModule} from '@angular/forms';
 
@@ -13,6 +13,7 @@ import {MustMatchDirective} from './_helpers/must-match.directive';
 @NgModule({
   imports: [BrowserModule, FormsModule],
   declarations: [AppComponent, MustMatchDirective],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class AppModule {}
