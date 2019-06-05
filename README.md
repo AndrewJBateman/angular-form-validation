@@ -1,6 +1,6 @@
 # Angular Form Validation
 
-This app sets up form validation in Angular 7 using Template-Driven Forms. This is a simple registration form with standard fields for first name, last name, email, password and confirm password. Additional field with maxLength validator added.
+This app sets up form validation in Angular 8 using Template-Driven Forms. This is a simple registration form with standard fields for first name, last name, email, password and confirm password. Additional field with maxLength validator added.
 
 *** Note: to open web links in a new window use: _ctrl+click on link_**
 
@@ -27,9 +27,11 @@ This app sets up form validation in Angular 7 using Template-Driven Forms. This 
 
 ## Technologies
 
-* [Angular v7.2.13](https://angular.io/) & [Angular CLI v7.3.8](https://cli.angular.io/).
+* [Angular v8.0.0](https://angular.io/)
 
-* [Bootstrap v4.3](https://getbootstrap.com/) component library used.
+* [Angular CLI v8.0.1](https://cli.angular.io/).
+
+* [Bootstrap v4.3.1](https://getbootstrap.com/) component library used.
 
 ## Setup
 
@@ -67,7 +69,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 ## Status & To-Do List
 
-* Status: simple working form with validaton. The maxLength validation div does not provide error message, just limits the field length to 5 characters.
+* Status: Working. The maxLength validation div does not provide error message, just limits the field length to 5 characters.
 
 * To-Do: add functionality to form.
 
@@ -77,4 +79,4 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 ## Contact
 
-Created by [ABateman](https://www.andrewbateman.org) - feel free to contact me!
+Repo created by [ABateman](https://www.andrewbateman.org) - feel free to contact me!
