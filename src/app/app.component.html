@@ -10,7 +10,7 @@ first time, this is controlled with the f.submitted property of the #f="ngForm" 
     <div class="row">
       <div class="col-md-8 offset-md-2">
 
-        <h5>Angular 7 Template-Driven Form Validation</h5>
+        <h5>Angular 9 Template-Driven Form Validation</h5>
         <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" [mustMatch]="['password', 'confirmPassword']" novalidate>
           <div class="form-group">
             <label for="firstName">First Name</label>
@@ -21,8 +21,7 @@ first time, this is controlled with the f.submitted property of the #f="ngForm" 
               [(ngModel)]="model.firstName" 
               #firstName="ngModel" 
               [ngClass]="{ 'is-invalid': f.submitted && firstName.invalid }" 
-              required
-            />
+              required/>
             <div *ngIf="f.submitted && firstName.invalid" class="invalid-feedback ">
               <div *ngIf="firstName?.errors.required">First Name is required</div>
             </div>

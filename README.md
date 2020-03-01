@@ -1,6 +1,6 @@
 # Angular Form Validation
 
-This app sets up form validation in Angular 8 using Template-Driven Forms. This is a simple registration form with standard fields for first name, last name, email, password and confirm password. Additional field with maxLength validator added.
+This app sets up form validation in Angular 9 using Template-Driven Forms. This is a simple registration form with standard fields for first name, last name, email, password and confirm password. Additional field with maxLength validator added.
 
 *** Note: to open web links in a new window use: _ctrl+click on link_**
 
@@ -18,7 +18,7 @@ This app sets up form validation in Angular 8 using Template-Driven Forms. This 
 ## General info
 
 * Input fields of main form have validation so incorrect inputs trigger a red boundary around the input field and an error message.
-* Styling of the template-driven forms is done using Bootstrap 4 CSS.
+* Styling of the template-driven forms is done using Bootstrap 4.
 
 ## Screenshots
 
@@ -27,11 +27,13 @@ This app sets up form validation in Angular 8 using Template-Driven Forms. This 
 ## Technologies
 
 * [Angular v8.0.0](https://angular.io/)
-* [Bootstrap v4.3.1](https://getbootstrap.com/) component library used.
+* [Bootstrap v4.4.1](https://getbootstrap.com/) component library used.
 
 ## Setup
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+* Install dependencies using `npm i`.
+* Run `ng serve` for a dev server.
+* Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code Examples
 
@@ -46,8 +48,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
               [(ngModel)]="model.firstName"
               #firstName="ngModel"
               [ngClass]="{ 'is-invalid': f.submitted && firstName.invalid }"
-              required
-            />
+              required/>
             <div *ngIf="f.submitted && firstName.invalid" class="invalid-feedback ">
               <div *ngIf="firstName?.errors.required">First Name is required</div>
             </div>
@@ -60,6 +61,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 * All fields are required, the email field must be a valid email address and the password field must have a min length of 6.
 * A custom validator and directive called MustMatch is used to validate that the confirm password and password fields match.
 * The form validates on submit rather than as soon as each field is changed, this is implemented using the f.submitted property of the #f="ngForm" template variable which is true after the form is submitted for the first time.
+* Updated to latest Angular v9.
 
 ## Status & To-Do List
 
