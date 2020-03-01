@@ -18,7 +18,6 @@ This app sets up form validation in Angular 8 using Template-Driven Forms. This 
 ## General info
 
 * Input fields of main form have validation so incorrect inputs trigger a red boundary around the input field and an error message.
-
 * Styling of the template-driven forms is done using Bootstrap 4 CSS.
 
 ## Screenshots
@@ -28,9 +27,6 @@ This app sets up form validation in Angular 8 using Template-Driven Forms. This 
 ## Technologies
 
 * [Angular v8.0.0](https://angular.io/)
-
-* [Angular CLI v8.0.1](https://cli.angular.io/).
-
 * [Bootstrap v4.3.1](https://getbootstrap.com/) component library used.
 
 ## Setup
@@ -62,15 +58,12 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 ## Features
 
 * All fields are required, the email field must be a valid email address and the password field must have a min length of 6.
-
 * A custom validator and directive called MustMatch is used to validate that the confirm password and password fields match.
-
 * The form validates on submit rather than as soon as each field is changed, this is implemented using the f.submitted property of the #f="ngForm" template variable which is true after the form is submitted for the first time.
 
 ## Status & To-Do List
 
 * Status: Working. The maxLength validation div does not provide error message, just limits the field length to 5 characters.
-
 * To-Do: add functionality to form.
 
 ## Inspiration
