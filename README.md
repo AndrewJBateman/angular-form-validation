@@ -1,41 +1,44 @@
-# Angular Form Validation
+# :zap: Angular Form Validation
 
-This app sets up form validation in Angular 9 using Template-Driven Forms. This is a simple registration form with standard fields for first name, last name, email, password and confirm password. Additional field with maxLength validator added.
+This app sets up form validation in Angular 10 using Template-Driven Forms. This is a simple registration form with standard fields for first name, last name, email, password and confirm password. Additional field with maxLength validator added.
 
 *** Note: to open web links in a new window use: _ctrl+click on link_**
 
-## Table of contents
+## :page_facing_up: Table of contents
 
-* [General info](#general-info)
-* [Screenshots](#screenshots)
-* [Technologies](#technologies)
-* [Setup](#setup)
-* [Features](#features)
-* [Status](#status)
-* [Inspiration](#inspiration)
-* [Contact](#contact)
+* [:zap: Angular Form Validation](#zap-angular-form-validation)
+  * [:page_facing_up: Table of contents](#page_facing_up-table-of-contents)
+  * [:books: General info](#books-general-info)
+  * [:camera: Screenshots](#camera-screenshots)
+  * [:signal_strength: Technologies](#signal_strength-technologies)
+  * [:floppy_disk: Setup](#floppy_disk-setup)
+  * [:computer: Code Examples](#computer-code-examples)
+  * [:cool: Features](#cool-features)
+  * [:clipboard: Status & To-Do List](#clipboard-status--to-do-list)
+  * [:clap: Inspiration](#clap-inspiration)
+  * [:envelope: Contact](#envelope-contact)
 
-## General info
+## :books: General info
 
 * Input fields of main form have validation so incorrect inputs trigger a red boundary around the input field and an error message.
-* Styling of the template-driven forms is done using Bootstrap 4.
+* Styling of the template-driven forms is done using Bootstrap.
 
-## Screenshots
+## :camera: Screenshots
 
 ![Example screenshot](./img/form-validation.png).
 
-## Technologies
+## :signal_strength: Technologies
 
-* [Angular v8.0.0](https://angular.io/)
-* [Bootstrap v4.4.1](https://getbootstrap.com/) component library used.
+* [Angular v10](https://angular.io/)
+* [Bootstrap v4](https://getbootstrap.com/) component library used.
 
-## Setup
+## :floppy_disk: Setup
 
 * Install dependencies using `npm i`.
 * Run `ng serve` for a dev server.
 * Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code Examples
+## :computer: Code Examples
 
 * div with firstName field entry that is validated using a validator and directive called MustMatch
 
@@ -56,22 +59,22 @@ This app sets up form validation in Angular 9 using Template-Driven Forms. This 
 
 ```
 
-## Features
+## :cool: Features
 
 * All fields are required, the email field must be a valid email address and the password field must have a min length of 6.
 * A custom validator and directive called MustMatch is used to validate that the confirm password and password fields match.
 * The form validates on submit rather than as soon as each field is changed, this is implemented using the f.submitted property of the #f="ngForm" template variable which is true after the form is submitted for the first time.
 * Updated to latest Angular v9.
 
-## Status & To-Do List
+## :clipboard: Status & To-Do List
 
 * Status: Working. The maxLength validation div does not provide error message, just limits the field length to 5 characters.
 * To-Do: add functionality to form.
 
-## Inspiration
+## :clap: Inspiration
 
 * [Blog by Jason Watmore: Angular 7 - Template-Driven Forms Validation Example](http://jasonwatmore.com/post/2018/11/10/angular-7-template-driven-forms-validation-example).
 
-## Contact
+## :envelope: Contact
 
-Repo created by [ABateman](https://www.andrewbateman.org) - feel free to contact me!
+* Repo created by [ABateman](https://www.andrewbateman.org) - you are welcome to [send me a message](https://andrewbateman.org/contact)
