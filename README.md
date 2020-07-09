@@ -64,7 +64,6 @@ This app sets up form validation in Angular 10 using Template-Driven Forms. This
 * All fields are required, the email field must be a valid email address and the password field must have a min length of 6.
 * A custom validator and directive called MustMatch is used to validate that the confirm password and password fields match.
 * The form validates on submit rather than as soon as each field is changed, this is implemented using the f.submitted property of the #f="ngForm" template variable which is true after the form is submitted for the first time.
-* Updated to latest Angular v9.
 
 ## :clipboard: Status & To-Do List
 
