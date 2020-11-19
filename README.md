@@ -1,6 +1,9 @@
 # :zap: Angular Form Validation
 
-This app sets up form validation in Angular 10 using Template-Driven Forms. This is a simple registration form with standard fields for first name, last name, email, password and confirm password. Additional field with maxLength validator added.
+* This app sets up form validation in Angular 10 using Template-Driven Forms.
+* This is a simple registration form with standard fields for first name, last name, email, password and confirm password. Additional field with maxLength validator added.
+* Code from [Blog by Jason Watmore:](http://jasonwatmore.com/post/2018/11/10/angular-7-template-driven-forms-validation-example) - see [:clap: Inspiration](#clap-inspiration) below.
+* Not to be upgraded from Angular 10.
 
 *** Note: to open web links in a new window use: _ctrl+click on link_**
 
@@ -43,20 +46,22 @@ This app sets up form validation in Angular 10 using Template-Driven Forms. This
 * div with firstName field entry that is validated using a validator and directive called MustMatch
 
 ```typescript
-          <div class="form-group">
-            <label for="firstName">First Name</label>
-            <input
-              class="form-control"
-              name="firstName"
-              [(ngModel)]="model.firstName"
-              #firstName="ngModel"
-              [ngClass]="{ 'is-invalid': f.submitted && firstName.invalid }"
-              required/>
-            <div *ngIf="f.submitted && firstName.invalid" class="invalid-feedback ">
-              <div *ngIf="firstName?.errors.required">First Name is required</div>
-            </div>
-          </div>
-
+<div class="form-group">
+  <label for="firstName">First Name</label>
+  <input
+    class="form-control"
+    name="firstName"
+    [(ngModel)]="model.firstName"
+    #firstName="ngModel"
+    [ngClass]="{ 'is-invalid': f.submitted && firstName.invalid }"
+    required
+  />
+  <div *ngIf="f.submitted && firstName.invalid" class="invalid-feedback ">
+    <div *ngIf="firstName?.errors.required">
+      First Name is required
+    </div>
+  </div>
+</div>
 ```
 
 ## :cool: Features
@@ -67,8 +72,8 @@ This app sets up form validation in Angular 10 using Template-Driven Forms. This
 
 ## :clipboard: Status & To-Do List
 
-* Status: Working. The maxLength validation div does not provide error message, just limits the field length to 5 characters.
-* To-Do: add functionality to form.
+* Status: Working.
+* To-Do: Nothing.
 
 ## :clap: Inspiration
 
